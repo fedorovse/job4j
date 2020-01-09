@@ -13,7 +13,7 @@ public class ArrayChar {
      * массива word - возвращает true. Массив pref <= word по длинне
      * @param word char[]
      * @param pref char[]
-     * @return boolean
+     * @return result boolean
      */
     public static boolean startsWith(char[] word, char[] pref) {
         boolean result = true;
