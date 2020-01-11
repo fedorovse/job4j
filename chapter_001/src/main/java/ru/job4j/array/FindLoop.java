@@ -25,6 +25,14 @@ public class FindLoop {
         return rst;
     }
 
+    /**
+     * Method ищет элемент в заданном диапазоне массива. Если находит вернет его индекс, если нет, то -1.
+     * @param data int[] - массив
+     * @param el int - искомый элемент
+     * @param start int - индекс элемента в массиве с которого начинает поиск
+     * @param finish int - индекс последнего элемента в диапазоне
+     * @return int - индекс элемента если он найден, -1 если не найден
+     */
     public int indexOf(int[] data, int el, int start, int finish) {
         int rst = -1;
         for (int index = start; index <= finish; index++) {
