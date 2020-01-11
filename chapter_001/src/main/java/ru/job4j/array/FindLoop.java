@@ -14,7 +14,7 @@ public class FindLoop {
      * @param el int - искомый элемент
      * @return index int - возвращает индекс заданного элемента или -1 если такого элемента нет.
      */
-    public int indexOf(int[] data, int el) {
+    public static int indexOf(int[] data, int el) {
         int rst = -1; // если элемента нет в массиве, то возвращаем -1
         for (int index = 0; index < data.length; index++) {
             if (data[index] == el) {
@@ -33,7 +33,7 @@ public class FindLoop {
      * @param finish int - индекс последнего элемента в диапазоне
      * @return int - индекс элемента если он найден, -1 если не найден
      */
-    public int indexOf(int[] data, int el, int start, int finish) {
+    public static int indexOf(int[] data, int el, int start, int finish) {
         int rst = -1;
         for (int index = start; index <= finish; index++) {
             if (data[index] == el) {
