@@ -31,4 +31,30 @@ public class MatrixCheckTest {
         boolean expect = false;
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenHasMonoVertical() {
+        int row = 1;
+        char[][] input = {
+                {' ', 'X', 'a'},
+                {'s', 'X', 'X'},
+                {'a', 'X', 'a'}
+        };
+        boolean result = MatrixCheck.monoVertical(input, row);
+        boolean expect = true;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenHasNotMonoVertical() {
+        int row = 1;
+        char[][] input = {
+                {' ', 'X', 'a'},
+                {'X', 'X', 'a'},
+                {'a', 'a', ' '}
+        };
+        boolean result = MatrixCheck.monoVertical(input, row);
+        boolean expect = false;
+        assertThat(result, is(expect));
+    }
 }
