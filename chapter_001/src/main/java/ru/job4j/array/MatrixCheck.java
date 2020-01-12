@@ -60,7 +60,7 @@ public class MatrixCheck {
      * @param board char[][] - входной массив
      * @return boolean - true если есть выигрышная комбанация, false - если нет
      */
-    public static boolean isWin (char[][] board) {
+    public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int index = 0; index < board.length; index++) {
             if (monoHorizontal(board, index) || monoVertical(board, index)) {

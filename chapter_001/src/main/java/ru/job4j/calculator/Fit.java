@@ -10,7 +10,7 @@ public class Fit {
         return  (height - 110D) * 1.15D;
     }
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         double man = manWeight(180);
         System.out.println(" Man 180 is " + man  + " kg ");
 

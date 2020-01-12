@@ -37,7 +37,7 @@ public class SqMaxTest {
     @Test
     public void whenEqual() {
         SqMax check = new SqMax();
-        int result = check.max(3, 3, 3,3);
+        int result = check.max(3, 3, 3, 3);
         assertThat(result, is(3));
 
     }

@@ -14,7 +14,7 @@ public class Calculator {
      * @param first double первое слогаемое
      * @param second double второе слогаемое
      */
-    public static void add (double first, double second) {
+    public static void add(double first, double second) {
         double result = first + second;
         System.out.println(first + " + " + second + " = " + result);
     }
@@ -24,7 +24,7 @@ public class Calculator {
      * @param first double - уменьшаемое
      * @param second double - вычитаемое
      */
-    public static  void subtract (double first, double second) {
+    public static  void subtract(double first, double second) {
         double result = first - second;
         System.out.println(first + " - " + second + " = " + result);
     }
@@ -34,7 +34,7 @@ public class Calculator {
      * @param first double - делимое
      * @param second double - делитель
      */
-    public static void div (double first, double second) {
+    public static void div(double first, double second) {
         double result = first / second;
         System.out.println(first + " / " + second + " = " + result);
     }
@@ -44,7 +44,7 @@ public class Calculator {
      * @param first double - первый множитель
      * @param second double - второй множитель
      */
-    public static void multiply (double first, double second) {
+    public static void multiply(double first, double second) {
         double result = first * second;
         System.out.println(first + " * " + second + " = " + result);
     }
@@ -53,11 +53,11 @@ public class Calculator {
      * Main - тестирование всех методов класса Calculator
      * @param args - args
      */
-    public static void main (String[] args) {
-        add(1,1);
-        div(4,2);
-        multiply(2,1);
-        subtract(10,5);
+    public static void main(String[] args) {
+        add(1, 1);
+        div(4, 2);
+        multiply(2, 1);
+        subtract(10, 5);
 
     }
 }

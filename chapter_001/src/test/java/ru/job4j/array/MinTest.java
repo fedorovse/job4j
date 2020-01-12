@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 public class MinTest {
 
     @Test
-    public void whenFirstMin () {
+    public void whenFirstMin() {
         int[] input = {3, 6, 10};
         int result = Min.findMin(input);
         int expect = 3;
@@ -15,16 +15,16 @@ public class MinTest {
     }
 
     @Test
-    public void whenLastMin () {
+    public void whenLastMin() {
         assertThat(
-                Min.findMin(new int [] {10, 5, 3}
+                Min.findMin(new int[] {10, 5, 3}
                 ),
                 is(3)
         );
     }
 
     @Test
-    public void whenMiddleMin () {
+    public void whenMiddleMin() {
         assertThat(
                 Min.findMin(new int[] {5, 2, 10}
                 ),

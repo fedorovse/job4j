@@ -5,7 +5,7 @@ public class CarUsage {
 
     public static void main(String[] args) {
         Car audi = new Car();
-        if(!audi.canDrive()) {
+        if (!audi.canDrive()) {
             audi.fill(10);
         }
         int km = 0;

@@ -10,8 +10,8 @@ public class CheckPrimeNumber {
             prime = true;
         }
 
-        for (int index = 2; index < finish ; index++) {
-            if(finish % index == 0) {
+        for (int index = 2; index < finish; index++) {
+            if (finish % index == 0) {
                 prime = false;
                 break;
             }

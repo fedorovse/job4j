@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 public class MinDiapasonTest {
 
     @Test
-    public void whenFirstMin () {
+    public void whenFirstMin() {
         assertThat(
                 MinDiapason.findMin(new int[] {-1, 0, 5, 10},
                 1, 3
@@ -17,7 +17,7 @@ public class MinDiapasonTest {
     }
 
     @Test
-    public void whenLastMin () {
+    public void whenLastMin() {
         assertThat(
                 MinDiapason.findMin(new int[] {10, 5, 3, 1},
                         1, 3
@@ -27,7 +27,7 @@ public class MinDiapasonTest {
     }
 
     @Test
-    public void whenMiddleMin () {
+    public void whenMiddleMin() {
         assertThat(
                 MinDiapason.findMin(new int[] {10, 2, 5, 1},
                         0, 2

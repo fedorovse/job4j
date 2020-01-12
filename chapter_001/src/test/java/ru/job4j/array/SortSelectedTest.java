@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 public class SortSelectedTest {
 
     @Test
-    public void sortSelectedTest5 () {
+    public void sortSelectedTest5() {
         int[] input = {3, 5, 1, 4, 2};
         int[] result = SortSelected.sort(input);
         int[] expect = {1, 2, 3, 4, 5};
