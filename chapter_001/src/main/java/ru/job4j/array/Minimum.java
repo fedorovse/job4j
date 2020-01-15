@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class Min {
+public class Minimum {
 
     public static int findMin(int[] data) {
         int min = data[0];

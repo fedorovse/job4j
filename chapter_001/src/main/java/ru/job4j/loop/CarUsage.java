@@ -9,7 +9,6 @@ public class CarUsage {
             audi.fill(10);
         }
         int km = 0;
-
         while (audi.canDrive()) {
             audi.drive(1);
             km++;
@@ -22,11 +21,8 @@ public class CarUsage {
             }
             audi.gasInfo();
             System.out.println(" km " + km);
-            //audi.gasInfo();
-
         }
         audi.gasInfo();
         System.out.println(" km " + km);
-
     }
 }

@@ -6,7 +6,7 @@ package ru.job4j.array;
  * @since 12.01.2020
  * @version 1
  */
-public class Defragment {
+public class Defragmentation {
 
     /**
      * Method compress - дефрагментирует строковый массив. Смещает все значения null в конец массива.
@@ -17,8 +17,6 @@ public class Defragment {
         for (int index = 0; index < array.length; index++) {
             String cell = array[index];
             if (cell == null) {
-                // переместить первую не null ячейку
-                // Здесь нужен цикл while
                 int i = index;
                 while (i < array.length) {
                     if (array[i] != null) {

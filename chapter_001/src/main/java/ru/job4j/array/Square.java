@@ -14,10 +14,10 @@ public class Square {
      * @return int[] - массив размером bound
      */
     public int[] calculate(int bound) {
-        int[] rst = new int[bound];
+        int[] result = new int[bound];
         for (int index = 0; index < bound; index++) {
-            rst[index] = (index + 1) * (index + 1);
+            result[index] = (index + 1) * (index + 1);
         }
-        return rst;
+        return result;
     }
 }

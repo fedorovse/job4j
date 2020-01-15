@@ -4,12 +4,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class MinTest {
+public class MinimumTest {
 
     @Test
     public void whenFirstMin() {
         int[] input = {3, 6, 10};
-        int result = Min.findMin(input);
+        int result = Minimum.findMin(input);
         int expect = 3;
         assertThat(result, is(expect));
     }
@@ -17,7 +17,7 @@ public class MinTest {
     @Test
     public void whenLastMin() {
         assertThat(
-                Min.findMin(new int[] {10, 5, 3}
+                Minimum.findMin(new int[] {10, 5, 3}
                 ),
                 is(3)
         );
@@ -26,7 +26,7 @@ public class MinTest {
     @Test
     public void whenMiddleMin() {
         assertThat(
-                Min.findMin(new int[] {5, 2, 10}
+                Minimum.findMin(new int[] {5, 2, 10}
                 ),
                 is(2)
         );

@@ -10,7 +10,7 @@ public class FactorialTest {
     public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
         // Тест, проверяющий, что факториал для числа 5 равен 120.
         Factorial checkFactorial = new Factorial();
-        int result = checkFactorial.calc(5);
+        int result = checkFactorial.calculation(5);
         assertThat(result, is(120));
     }
 
@@ -18,7 +18,7 @@ public class FactorialTest {
     public void whenCalculateFactorialForZeroThenOne() {
         // Тест, проверяющий, что факториал для числа 0 равен 1.
         Factorial checkFactorial = new Factorial();
-        int result = checkFactorial.calc(0);
+        int result = checkFactorial.calculation(0);
         assertThat(result, is(1));
     }
 
@@ -26,7 +26,7 @@ public class FactorialTest {
     public void whenCalculateFactorialForOneThenOne() {
         // Тест, проверяющий, что факториал для числа 1 равен 1.
         Factorial checkFactorial = new Factorial();
-        int result = checkFactorial.calc(1);
+        int result = checkFactorial.calculation(1);
         assertThat(result, is(1));
     }
 }

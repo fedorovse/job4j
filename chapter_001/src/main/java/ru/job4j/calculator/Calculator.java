@@ -58,6 +58,5 @@ public class Calculator {
         div(4, 2);
         multiply(2, 1);
         subtract(10, 5);
-
     }
 }
