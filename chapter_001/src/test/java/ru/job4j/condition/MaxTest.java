@@ -23,4 +23,32 @@ public class MaxTest {
         int result = Max.max(3, 3);
         assertThat(result, is(3));
     }
+
+    @Test
+    public void whenMaxFirstFrom3() {
+        int result = Max.max(5, 3, 3);
+        int expect = 5;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenMaxThirdFrom3() {
+        int result = Max.max(5, 3, 12);
+        int expect = 12;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenMaxSecondFrom4() {
+        int result = Max.max(5, 6, 3, 2);
+        int expect = 6;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenMaxFourthFrom4() {
+        int result = Max.max(5, 6, 3, 9);
+        int expect = 9;
+        assertThat(result, is(expect));
+    }
 }
