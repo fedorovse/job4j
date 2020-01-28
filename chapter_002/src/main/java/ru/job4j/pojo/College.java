@@ -12,7 +12,7 @@ public class College {
         student.setGroup("Stazhor2020-PRO");
         student.setEntrance(new Date());
         System.out.println("Student : " + student.getSurname() + " " + student.getName() + " " + student.getPatronymic()
-                + "\n" + "Group : " + student.getGroup()
-                + "\n" + "Receipt date : " + student.getEntrance());
+                + System.lineSeparator() + "Group : " + student.getGroup()
+                + System.lineSeparator() + "Receipt date : " + student.getEntrance());
     }
 }
