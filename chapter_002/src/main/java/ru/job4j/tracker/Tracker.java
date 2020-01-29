@@ -81,12 +81,32 @@ public class Tracker {
      */
     public Item findById(String id) {
         Item findItem = null;
-        for (int index = 0; index < this.items.length; index++) {
-            if (this.items[index] != null && this.items[index].getId().equals(id)) {
-                findItem = this.items[index];
+        if (indexOf(id) >= 0) {
+            findItem = items[indexOf(id)];
+        }
+        return findItem;
+    }
+
+    /**
+     * Замена существующей заявки на другую. При этом id сохраняется.
+     * @param id - заявки, которую необходимо заменить
+     * @param item - новая заявка
+     */
+    public void replace(String id, Item item) {
+        if (indexOf(id) >= 0) {
+            item.setId(id);
+            items[indexOf(id)] = item;
+        }
+    }
+
+    private int indexOf(String id) {
+        int result = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                result = index;
                 break;
             }
         }
-        return findItem;
+        return result;
     }
 }
