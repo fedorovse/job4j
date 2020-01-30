@@ -81,8 +81,9 @@ public class Tracker {
      */
     public Item findById(String id) {
         Item findItem = null;
-        if (indexOf(id) >= 0) {
-            findItem = items[indexOf(id)];
+        int index = indexOf(id);
+        if (index >= 0) {
+            findItem = items[index];
         }
         return findItem;
     }
@@ -93,9 +94,10 @@ public class Tracker {
      * @param item - новая заявка
      */
     public void replace(String id, Item item) {
-        if (indexOf(id) >= 0) {
+        int index = indexOf(id);
+        if (index >= 0) {
             item.setId(id);
-            items[indexOf(id)] = item;
+            items[index] = item;
         }
     }
 
