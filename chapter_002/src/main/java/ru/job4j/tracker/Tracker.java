@@ -105,8 +105,10 @@ public class Tracker {
 
     public void delete(String id) {
         int index = indexOf(id);
-        System.arraycopy(items, index + 1, items, index, position - index);
-        position--;
-        items[position] = null;
+        if (index >= 0) {
+            System.arraycopy(items, index + 1, items, index, position - index);
+            position--;
+            items[position] = null;
+        }
     }
 }
