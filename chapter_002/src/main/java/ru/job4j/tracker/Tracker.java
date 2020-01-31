@@ -44,16 +44,7 @@ public class Tracker {
      * @return хранилище заявок без пустых ячеек
      */
     public Item[] findAll() {
-        Item[] itemsWithoutNull = new Item[this.items.length];
-        int size = 0;
-        for (int index = 0; index < position; index++) {
-            if (this.items[index] != null) {
-                itemsWithoutNull[size] = this.items[index];
-                size++;
-            }
-        }
-        itemsWithoutNull = Arrays.copyOf(itemsWithoutNull, size);
-        return itemsWithoutNull;
+        return Arrays.copyOf(items, position);
     }
 
     /**
