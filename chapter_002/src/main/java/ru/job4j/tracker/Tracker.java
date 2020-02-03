@@ -103,6 +103,10 @@ public class Tracker {
         return result;
     }
 
+    /**
+     * Удаление заявки. Массив сдвигается заполняя дырку.
+     * @param id - заявки
+     */
     public void delete(String id) {
         int index = indexOf(id);
         if (index >= 0) {
