@@ -15,6 +15,7 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
+                System.out.println("Order with the name : " + name + " created");
             } else if (select == 1) {
                 System.out.println("=== All Items ====");
                 Item[] items = tracker.findAll();
@@ -31,11 +32,13 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.replace(id, item);
+                System.out.println("The order with id: " + id + " has been replaced");
             } else if (select == 3) {
                 System.out.println("=== Delete Item ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
                 tracker.delete(id);
+                System.out.println("Order with id: " + id + " deleted");
             } else if (select == 4) {
                 System.out.println("=== Find Item by id ====");
                 System.out.print("Enter id: ");
