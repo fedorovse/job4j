@@ -84,12 +84,15 @@ public class Tracker {
      * @param id - заявки, которую необходимо заменить
      * @param item - новая заявка
      */
-    public void replace(String id, Item item) {
+    public boolean replace(String id, Item item) {
         int index = indexOf(id);
+        boolean result = false;
         if (index >= 0) {
             item.setId(id);
             items[index] = item;
+            result = true;
         }
+        return result;
     }
 
     private int indexOf(String id) {
@@ -107,12 +110,15 @@ public class Tracker {
      * Удаление заявки. Массив сдвигается заполняя дырку.
      * @param id - заявки
      */
-    public void delete(String id) {
+    public boolean delete(String id) {
         int index = indexOf(id);
+        boolean result = false;
         if (index >= 0) {
             System.arraycopy(items, index + 1, items, index, position - index);
             position--;
             items[position] = null;
+            result = true;
         }
+        return result;
     }
 }

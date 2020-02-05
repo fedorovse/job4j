@@ -25,15 +25,21 @@ public class StartUI {
         String id = input.askStr("Enter id: ");
         String name = input.askStr("Enter new name: ");
         Item item = new Item(name);
-        tracker.replace(id, item);
-        System.out.println("The order with id: " + id + " has been replaced");
+        if (tracker.replace(id, item)) {
+            System.out.println("The order with id: " + id + " has been replaced");
+        } else {
+            System.out.println("The order with id: " + id + " not found");
+        }
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete Item ====");
         String id = input.askStr("Enter id: ");
-        tracker.delete(id);
-        System.out.println("Order with id: " + id + " deleted");
+        if (tracker.delete(id)) {
+            System.out.println("Order with id: " + id + " deleted");
+        } else {
+            System.out.println("Order with id: " + id + " not found");
+        }
     }
 
     public static void findItemById(Input input, Tracker tracker) {
@@ -51,10 +57,14 @@ public class StartUI {
         System.out.println("=== Find Item by name ====");
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
-        for (int index = 0; index < items.length; index++) {
-            System.out.println("Order № " + (index + 1)
-                    + " name: " + items[index].getName()
-                    + " id: " + items[index].getId());
+        if (items.length == 0) {
+            System.out.println("Order with name: " + name + " not found");
+        } else {
+            for (int index = 0; index < items.length; index++) {
+                System.out.println("Order № " + (index + 1)
+                        + " name: " + items[index].getName()
+                        + " id: " + items[index].getId());
+            }
         }
     }
 
