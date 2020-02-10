@@ -12,13 +12,12 @@ public class Paint {
      * @param shape геометрическая фигура в виде строки
      */
     public void draw(Shape shape) {
-        System.out.print(shape.draw());
+        System.out.println(shape.draw());
     }
 
     public static void main(String[] args) {
         Paint paint = new Paint();
         paint.draw(new Square());
-        System.out.println("");
         paint.draw(new Triangle());
     }
 }

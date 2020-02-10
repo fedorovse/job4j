@@ -44,6 +44,7 @@ public class PaintTest {
                 .add("*****")
                 .add("*****")
                 .add("*****")
+                .add("")
                 .toString()
                 )
         );
@@ -58,6 +59,7 @@ public class PaintTest {
                         .add("***")
                         .add("****")
                         .add("*****")
+                        .add("")
                         .toString()
                 )
         );
