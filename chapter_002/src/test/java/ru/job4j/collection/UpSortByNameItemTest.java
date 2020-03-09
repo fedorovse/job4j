@@ -20,7 +20,7 @@ public class UpSortByNameItemTest {
         list.add(new Item("abc"));
         list.add(new Item("iat"));
         Collections.sort(list, new UpSortByNameItem());
-        String result = list.get(0).getName() + " " + list.get(1).getName() + " " + list.get(2).getName();
+        String result = String.format("%s %s %s", list.get(0).getName(), list.get(1).getName(), list.get(2).getName());
         String expect = "abc iat kfc";
         assertThat(result, is(expect));
     }
