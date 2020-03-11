@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fedorovse/job4j.svg?branch=master)](https://travis-ci.org/fedorovse/job4j)
+[![codecov](https://codecov.io/gh/fedorovse/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/fedorovse/job4j)
 # job4j
 # temp
 Я начал курс 22 декабря 2019 года и планирую его закончить в сентябре 2020 года.
