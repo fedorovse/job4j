@@ -14,12 +14,10 @@ public class StringCompare implements Comparator<String> {
         for (int index = 0; index < charArrayLength; index++) {
             result = Character.compare(o1CharArray[index], o2CharArray[index]);
             if (result != 0) {
-                return  result;
+                break;
             }
         }
-        if (o1.length() == o2.length()) {
-            result = 0;
-        } else {
+        if (result == 0 && o1.length() != o2.length()) {
             result = o1.length() > o2.length() ? 1 : -1;
         }
         return result;
