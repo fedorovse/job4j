@@ -10,7 +10,7 @@ public class StringCompare implements Comparator<String> {
         char[] o1CharArray = o1.toCharArray();
         char[] o2CharArray = o2.toCharArray();
         int result = 0;
-        int charArrayLength = o1.length() < o2.length() ? o1.length() : o2.length();
+        int charArrayLength = Math.min(o1.length(), o2.length());
         for (int index = 0; index < charArrayLength; index++) {
             result = Character.compare(o1CharArray[index], o2CharArray[index]);
             if (result != 0) {
