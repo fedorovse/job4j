@@ -18,4 +18,14 @@ public class PhoneDictionaryTest {
         String expect = "Sergey";
         Assert.assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenFindByPhone() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+        );
+        ArrayList<Person> persons = phones.find("348");
+        assertThat(persons.get(0).getSurname(), is("Arsentev"));
+    }
 }
