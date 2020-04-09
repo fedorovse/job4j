@@ -1,0 +1,28 @@
+package ru.job4j.lambda;
+
+import org.junit.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ProfileTest {
+
+    @Test
+    public void profilesToListAddresses() {
+        List<Profile> in = Arrays.asList(
+                new Profile(new Address("Moskva", "Puka", 1, 5)),
+                new Profile(new Address("Tverb", "Tik", 4, 22)),
+                new Profile(new Address("Opel", "Vano", 17, 6))
+        );
+        List<Address> result = Profile.collect(in);
+        List<Address> expected = Arrays.asList(
+                new Address("Moskva", "Puka", 1, 5),
+                new Address("Tverb", "Tik", 4, 22),
+                new Address("Opel", "Vano", 17, 6)
+        );
+        assertThat(result, is(expected));
+    }
+}
