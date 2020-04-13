@@ -15,13 +15,14 @@ public class ProfileTest {
         List<Profile> in = Arrays.asList(
                 new Profile(new Address("Moskva", "Puka", 1, 5)),
                 new Profile(new Address("Tverb", "Tik", 4, 22)),
+                new Profile(new Address("Moskva", "Puka", 1, 5)),
                 new Profile(new Address("Opel", "Vano", 17, 6))
         );
         List<Address> result = Profile.collect(in);
         List<Address> expected = Arrays.asList(
                 new Address("Moskva", "Puka", 1, 5),
-                new Address("Tverb", "Tik", 4, 22),
-                new Address("Opel", "Vano", 17, 6)
+                new Address("Opel", "Vano", 17, 6),
+                new Address("Tverb", "Tik", 4, 22)
         );
         assertThat(result, is(expected));
     }
