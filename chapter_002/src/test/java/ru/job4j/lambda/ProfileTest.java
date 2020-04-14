@@ -18,7 +18,7 @@ public class ProfileTest {
                 new Profile(new Address("Moskva", "Puka", 1, 5)),
                 new Profile(new Address("Opel", "Vano", 17, 6))
         );
-        List<Address> result = Profile.collect(in);
+        List<Address> result = Collect.collect(in);
         List<Address> expected = Arrays.asList(
                 new Address("Moskva", "Puka", 1, 5),
                 new Address("Opel", "Vano", 17, 6),

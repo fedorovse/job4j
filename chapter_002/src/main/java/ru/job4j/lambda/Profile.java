@@ -1,6 +1,5 @@
 package ru.job4j.lambda;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -14,16 +13,6 @@ public class Profile {
 
     public Address getAddress() {
         return address;
-    }
-
-    Comparator<Address> cityComparator = (x1, x2) -> x1.getCity().compareTo(x2.getCity());
-
-    public static List<Address> collect(List<Profile> profiles) {
-        List<Address> result = profiles.stream().map(x -> x.getAddress()).collect(Collectors.toList());
-        return result.stream()
-                .sorted((x1, x2) -> x1.getCity().compareTo(x2.getCity()))
-                .distinct()
-                .collect(Collectors.toList());
     }
 
     @Override
