@@ -1,9 +1,7 @@
 package ru.job4j.bank;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class BankService {
 
@@ -22,11 +20,19 @@ public class BankService {
 
     public User findByPassport(String passport) {
         User result = null;
-        for (User user: users.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                result = user;
-                break;
-            }
+//        for (User user: users.keySet()) {
+//            if (user.getPassport().equals(passport)) {
+//                result = user;
+//                break;
+//            }
+//        }
+//        return result;
+
+        List<User> user = users.keySet().stream()
+                .filter(x -> x.getPassport().equals(passport))
+                .collect(Collectors.toList());
+        if (!user.isEmpty()) {
+            result = user.get(0);
         }
         return result;
     }
@@ -34,13 +40,23 @@ public class BankService {
     public Account findByRequisite(String passport, String requisite) {
         Account result = null;
         User user = findByPassport(passport);
-        List<Account> accounts = users.get(user);
-        if (user != null && accounts.size() > 0) {
-            for (Account account: accounts) {
-                if (account.getRequisite().equals(requisite)) {
-                    result = account;
-                    break;
-                }
+//        List<Account> accounts = users.get(user);
+//        if (user != null && accounts.size() > 0) {
+//            for (Account account: accounts) {
+//                if (account.getRequisite().equals(requisite)) {
+//                    result = account;
+//                    break;
+//                }
+//            }
+//        }
+
+        if (user != null) {
+            List<Account> accounts = users.get(user)
+                    .stream()
+                    .filter(x -> x.getRequisite().equals(requisite))
+                    .collect(Collectors.toList());
+            if (!accounts.isEmpty()) {
+                result = accounts.get(0);
             }
         }
         return result;
