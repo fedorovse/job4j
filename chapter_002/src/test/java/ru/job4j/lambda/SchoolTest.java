@@ -2,10 +2,7 @@ package ru.job4j.lambda;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -78,6 +75,25 @@ public class SchoolTest {
         expect.put(50, new Student(50));
         expect.put(38, new Student(38));
         expect.put(66, new Student(66));
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenStudentWithNull() {
+        School school = new School();
+        List<Student> in = new ArrayList<>();
+        in.add(new Student(72));
+        in.add(null);
+        in.add(new Student(50));
+        in.add(new Student(66));
+        in.add(null);
+        in.add(new Student(38));
+        List<Student> result = school.levelOf(in, 40);
+        List<Student> expect = List.of(
+                new Student(50),
+                new Student(66),
+                new Student(72)
+        );
         assertThat(result, is(expect));
     }
 }
