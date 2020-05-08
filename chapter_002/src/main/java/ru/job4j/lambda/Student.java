@@ -1,18 +1,29 @@
 package ru.job4j.lambda;
 
 import java.util.Objects;
+import java.util.Set;
 
 public class Student implements Comparable {
     private int score;
     private String name;
+    private Set<String> units;
 
     public Student(int score, String name) {
         this.score = score;
         this.name = name;
     }
 
+    public Student(String name, Set<String> units) {
+        this.name = name;
+        this.units = units;
+    }
+
     public Student(int score) {
         this.score = score;
+    }
+
+    public Set<String> getUnits() {
+        return units;
     }
 
     public int getScore() {
@@ -33,12 +44,13 @@ public class Student implements Comparable {
         }
         Student student = (Student) o;
         return score == student.score
-                && Objects.equals(name, student.name);
+                && Objects.equals(name, student.name)
+                && Objects.equals(units, student.units);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(score, name);
+        return Objects.hash(score, name, units);
     }
 
     @Override
@@ -46,6 +58,7 @@ public class Student implements Comparable {
         return "Student{"
                 + "score=" + score
                 + ", name='" + name + '\''
+                + ", units=" + units
                 + '}';
     }
 
